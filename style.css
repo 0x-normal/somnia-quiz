@@ -1,0 +1,572 @@
+/* Define CSS Variables for Light Mode (Default) */
+:root {
+    /* Colors derived from your logo: Blue, Purple, Pink */
+    --color-primary-blue: #87CEEB; /* Sky Blue */
+    --color-primary-purple: #DDA0DD; /* Plum */
+    --color-primary-pink: #FF69B4; /* Hot Pink */
+    --color-dark-purple-text: #7D3C98; /* Darker Purple for titles/accents */
+
+    /* General Backgrounds & Text */
+    --body-bg-gradient-start: var(--color-primary-blue);
+    --body-bg-gradient-middle: var(--color-primary-purple);
+    --body-bg-gradient-end: var(--color-primary-pink);
+    --body-text-color: #333;
+    --footer-text-color: #6a6a6a;
+
+    /* Container/Card Backgrounds */
+    --container-bg: rgba(255, 255, 255, 0.95);
+    --container-border-color: rgba(255, 255, 255, 0.2);
+    --card-bg: #fff;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+    --nft-preview-bg: #FDF9F9;
+    --nft-preview-border: #DDA0DD;
+
+    /* Button Colors */
+    --btn-primary-gradient-start: var(--color-primary-blue);
+    --btn-primary-gradient-end: var(--color-primary-purple);
+    --btn-primary-hover-gradient-start: var(--color-primary-purple);
+    --btn-primary-hover-gradient-end: var(--color-primary-pink);
+    --btn-secondary-gradient-start: var(--color-primary-pink);
+    --btn-secondary-gradient-end: var(--color-primary-purple);
+    --btn-secondary-hover-gradient-start: var(--color-primary-purple);
+    --btn-secondary-hover-gradient-end: var(--color-primary-blue);
+    --btn-text-color: #fff;
+    --btn-shadow-color-primary: rgba(135, 206, 235, 0.4); /* Based on primary blue */
+    --btn-shadow-color-primary-hover: rgba(221, 160, 221, 0.5); /* Based on purple */
+    --btn-shadow-color-secondary: rgba(255, 105, 180, 0.4); /* Based on pink */
+    --btn-shadow-color-secondary-hover: rgba(221, 160, 221, 0.5); /* Based on purple */
+
+    /* Headings & Accents */
+    --h1-color: var(--color-dark-purple-text);
+    --h2-color: var(--color-primary-pink);
+    --timer-color: var(--color-dark-purple-text);
+    --progress-bg: #e0e0e0;
+    --progress-fill-start: var(--color-primary-blue);
+    --progress-fill-end: var(--color-primary-purple);
+
+    /* Quiz Answers */
+    --answer-btn-bg: #F8F8F8;
+    --answer-btn-border: #ddd;
+    --answer-btn-hover-bg: #EFEFEF;
+    --answer-btn-text: #333;
+    --answer-btn-shadow: rgba(0,0,0,0.05);
+    --answer-btn-hover-shadow: rgba(0,0,0,0.1);
+
+    /* Message Colors */
+    --msg-success-bg: #E8F5E9;
+    --msg-success-color: #2E7D32;
+    --msg-success-border: #4CAF50;
+    --msg-error-bg: #FFEBEE;
+    --msg-error-color: #C62828;
+    --msg-error-border: #F44336;
+}
+
+/* Dark Mode Variables */
+body.dark-theme {
+    /* General Backgrounds & Text */
+    --body-bg-gradient-start: #1A0F2B; /* Darker Purple */
+    --body-bg-gradient-middle: #2B1A4B; /* Even Darker Purple */
+    --body-bg-gradient-end: #3D2C6D; /* Deepest Purple */
+    --body-text-color: #e0e0e0; /* Light grey text */
+    --footer-text-color: #a0a0a0;
+
+    /* Container/Card Backgrounds */
+    --container-bg: rgba(40, 40, 60, 0.95); /* Darker, slightly transparent */
+    --container-border-color: rgba(255, 255, 255, 0.1);
+    --card-bg: #2b2b45; /* Dark card background */
+    --card-shadow-color: rgba(0, 0, 0, 0.3);
+    --nft-preview-bg: #3a3a5a;
+    --nft-preview-border: #8E44AD; /* Darker purple dashed border */
+
+    /* Button Colors - adapt to be visible on dark */
+    --btn-primary-gradient-start: var(--color-primary-blue); /* Keep vibrant from logo */
+    --btn-primary-gradient-end: #7D3C98; /* Deeper purple */
+    --btn-primary-hover-gradient-start: #DDA0DD;
+    --btn-primary-hover-gradient-end: #FF69B4;
+    --btn-secondary-gradient-start: #FF69B4;
+    --btn-secondary-gradient-end: #7D3C98;
+    --btn-secondary-hover-gradient-start: #DDA0DD;
+    --btn-secondary-hover-gradient-end: var(--color-primary-blue);
+    --btn-text-color: #fff; /* Keep white for readability */
+    --btn-shadow-color-primary: rgba(135, 206, 235, 0.3);
+    --btn-shadow-color-primary-hover: rgba(221, 160, 221, 0.4);
+    --btn-shadow-color-secondary: rgba(255, 105, 180, 0.3);
+    --btn-shadow-color-secondary-hover: rgba(221, 160, 221, 0.4);
+
+    /* Headings & Accents */
+    --h1-color: var(--color-primary-purple); /* Lighter purple for dark mode heading */
+    --h2-color: var(--color-primary-pink); /* Keep vibrant pink */
+    --timer-color: var(--color-primary-purple);
+    --progress-bg: #555570; /* Darker background for progress bar */
+    --progress-fill-start: var(--color-primary-blue);
+    --progress-fill-end: var(--color-primary-purple);
+
+    /* Quiz Answers */
+    --answer-btn-bg: #3a3a5a; /* Darker answer buttons */
+    --answer-btn-border: #555570;
+    --answer-btn-hover-bg: #4a4a6a;
+    --answer-btn-text: #e0e0e0;
+    --answer-btn-shadow: rgba(0,0,0,0.1);
+    --answer-btn-hover-shadow: rgba(0,0,0,0.2);
+
+    /* Message Colors - adapt for dark background */
+    --msg-success-bg: #2C5F2D; /* Darker green */
+    --msg-success-color: #A3D8A5; /* Lighter green text */
+    --msg-success-border: #4CAF50;
+    --msg-error-bg: #7C2A2A; /* Darker red */
+    --msg-error-color: #F0A0A0; /* Lighter red text */
+    --msg-error-border: #F44336;
+}
+
+/* General Body and Container Styles - using variables */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--body-bg-gradient-start), var(--body-bg-gradient-middle), var(--body-bg-gradient-end));
+    background-attachment: fixed;
+    color: var(--body-text-color);
+    overflow: hidden;
+    position: relative;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out; /* Smooth transition for theme change */
+}
+
+/* Background animation - keep as is, it's cool */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: pulseBackground 15s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes pulseBackground {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Fixed Footer - using variables */
+.fixed-footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--footer-text-color);
+    z-index: 999;
+    background-color: transparent;
+}
+
+.footer-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin: 0 0.2em;
+}
+
+/* Main Container (the white card) - using variables */
+.container {
+    background-color: var(--container-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 10;
+    max-width: 800px; /* reduced from 800px */
+    width: 100%;
+    position: relative;
+    border: 1px solid var(--container-border-color);
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+/* Header Styles - using variables */
+.main-header {
+    margin-bottom: 30px;
+}
+
+.main-header .header-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.main-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: var(--h1-color);
+    margin-bottom: 5px;
+    transition: color 0.5s ease-in-out;
+}
+
+.main-header p {
+    font-size: 1.1em;
+    color: var(--body-text-color); /* General body text color */
+    line-height: 1.6;
+    
+}
+
+/* Section Card Styles - using variables */
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--card-shadow-color);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;     /* reduce from 30px */
+    max-width: 100%;
+    margin-top: 20px;
+    
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: var(--h2-color);
+    margin-bottom: 1px;
+    margin-top: 1px;
+    transition: color 0.5s ease-in-out;
+}
+
+.card p {
+    font-size: 1em;
+    color: var(--body-text-color); /* General body text color */
+    margin-bottom: 10px;
+}
+
+/* Button Styles - using variables */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--btn-text-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.primary-btn {
+    background: linear-gradient(to right, var(--btn-primary-gradient-start), var(--btn-primary-gradient-end));
+    box-shadow: 0 4px 15px var(--btn-shadow-color-primary);
+}
+
+.primary-btn:hover {
+    background: linear-gradient(to right, var(--btn-primary-hover-gradient-start), var(--btn-primary-hover-gradient-end));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--btn-shadow-color-primary-hover);
+}
+
+.secondary-btn {
+    background: linear-gradient(to right, var(--btn-secondary-gradient-start), var(--btn-secondary-gradient-end));
+    box-shadow: 0 4px 15px var(--btn-shadow-color-secondary);
+    margin-left: 15px;
+}
+
+.secondary-btn:hover {
+    background: linear-gradient(to right, var(--btn-secondary-hover-gradient-start), var(--btn-secondary-hover-gradient-end));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--btn-shadow-color-secondary-hover);
+}
+
+.actions-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Quiz Specific Styles - using variables */
+.quiz-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    width: 70%;
+    background-color: var(--progress-bg);
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, var(--progress-fill-start), var(--progress-fill-end));
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out, background 0.5s ease-in-out;
+}
+
+.timer {
+    font-weight: 600;
+    color: var(--timer-color);
+    font-size: 1.1em;
+    transition: color 0.5s ease-in-out;
+}
+
+#questionText {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: var(--body-text-color);
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.4;
+    transition: color 0.5s ease-in-out;
+}
+
+.answers-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 100%;
+}
+
+.answer-btn {
+    background-color: var(--answer-btn-bg);
+    color: var(--answer-btn-text);
+    border: 1px solid var(--answer-btn-border);
+    box-shadow: 0 2px 5px var(--answer-btn-shadow);
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    transition: all 0.2s ease, background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background-color: var(--answer-btn-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--answer-btn-hover-shadow);
+}
+
+.answer-btn.correct {
+    background-color: var(--msg-success-bg);
+    border-color: var(--msg-success-border);
+    color: var(--msg-success-color);
+}
+
+.answer-btn.incorrect {
+    background-color: var(--msg-error-bg);
+    border-color: var(--msg-error-border);
+    color: var(--msg-error-color);
+}
+
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* NFT Preview Styles - using variables */
+.nft-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 15px;
+    background-color: var(--nft-preview-bg);
+    border-radius: 18px;
+    border: 1px dashed var(--nft-preview-border);
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.nft-preview-image {
+    max-width: 160px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.nft-preview-text {
+    font-size: 1.1em;
+    color: var(--body-text-color);
+    text-align: center;
+    line-height: 1.5;
+    transition: color 0.5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+/* Message Display - using variables */
+.message {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.message.success {
+    background-color: var(--msg-success-bg);
+    color: var(--msg-success-color);
+    border: 1px solid var(--msg-success-border);
+}
+
+.message.error {
+    background-color: var(--msg-error-bg);
+    color: var(--msg-error-color);
+    border: 1px solid var(--msg-error-border);
+}
+
+/* Hidden Utility Class */
+.hidden {
+    display: none;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (min-width: 600px) {
+    .answers-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .main-header h1 {
+        font-size: 3em;
+    }
+    .card h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .main-header h1 {
+        font-size: 2em;
+    }
+    .main-header .header-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .btn {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-top: 5px;
+
+    }
+    .actions-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .quiz-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .progress-bar {
+        width: 100%;
+    }
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--container-bg); /* Use theme-aware background */
+    color: var(--body-text-color); /* Use theme-aware text color */
+    border: 1px solid var(--container-border-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it's above other content */
+}
+.footer-author-link {
+    /* Make text transparent to apply background as text fill */
+    color: transparent; 
+    /* Apply gradient from theme colors */
+    background: linear-gradient(to right, var(--color-primary-blue), var(--color-primary-purple), var(--color-primary-pink));
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text;
+    text-decoration: none; /* Remove default underline */
+    font-weight: 600; /* Make it bolder */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    display: inline-block; /* Essential for transform to work properly */
+}
+
+.footer-author-link:hover {
+    /* Slightly shift the gradient on hover, or apply a different background */
+    background: linear-gradient(to right, var(--color-primary-pink), var(--color-primary-purple), var(--color-primary-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Optional: subtle scale or text shadow */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    text-shadow: 0 0 8px rgba(var(--color-primary-purple), 0.5); /* Subtle glow */
+}
+
+/* Ensure the default footer link style doesn't override this, or keep it */
+.fixed-footer a {
+    /* Remove any conflicting styles from .fixed-footer a if they exist */
+    /* For example, if it had a specific 'color' that overrides transparent */
+    color: var(--footer-text-color); /* Fallback for browsers that don't support background-clip: text */
+}
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Icon specific styling if you use an SVG or font icon */
+.theme-toggle-btn .icon {
+    font-size: 1em; /* Adjust if using font awesome or similar */
+}

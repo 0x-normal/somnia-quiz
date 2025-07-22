@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Somnia Quiz Challenge</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+  <button id="themeToggleBtn" class="theme-toggle-btn">
+    <i class="fas fa-sun"></i>
+  </button>
+
+  <div class="background-animation"></div>
+  <div class="container">
+    <header class="main-header">
+      <img src="assets/logo.png" class="header-icon" />
+      <h1>Somnia Quiz Challenge</h1>
+      <p>Test your knowledge about Somnia.</p>
+    </header>
+
+    <main>
+      <section id="walletConnectSection" class="card fade-in">
+        <h2>Connect Your Wallet</h2>
+        <p>Please connect your wallet to the Somnia testnet to begin.</p>
+        <button id="connectWalletBtn" class="btn primary-btn">Connect Wallet</button>
+      </section>
+
+      <section id="startQuizSection" class="card hidden fade-in">
+        <h2>Ready to Begin?</h2>
+        <p>Prove your Somnia knowledge.</p>
+        <button id="startQuizBtn" class="btn primary-btn">Start Quiz</button>
+      </section>
+
+      <section id="quizContainer" class="card hidden fade-in">
+        <div class="quiz-header">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <div id="timerDisplay" class="timer">Time left: 30s</div>
+        </div>
+        <h3 id="questionText">Question goes here...</h3>
+        <div id="answersContainer" class="answers-grid"></div>
+      </section>
+
+      <section id="quizResultsSection" class="card hidden fade-in">
+        <h2>Quiz Complete!</h2>
+        <p id="finalScoreDisplay"></p>
+        <div class="actions-grid">
+          <button id="takeQuizAgainBtn" class="btn secondary-btn">Take Quiz Again</button>
+        </div>
+      </section>
+
+      <div id="messageDisplay" class="message hidden"></div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+
+  <footer class="fixed-footer">
+    Made with love <img src="assets/logo.png" class="footer-icon" />
+    by <a href="https://twitter.com/0xnormal_" target="_blank" rel="noopener noreferrer" class="footer-author-link">@0xnormal_</a>
+  </footer>
+</body>
+</html>
