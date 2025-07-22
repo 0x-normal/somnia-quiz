@@ -296,7 +296,7 @@ function endQuiz() {
 }
 function submitScore(walletAddress, score) {
   if (score >= 5) {
-    fetch("http://localhost:4000/api/save-score", {
+    fetch("https://somnia-quiz.vercel.app/api/save-score", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ wallet_address: walletAddress, score })
